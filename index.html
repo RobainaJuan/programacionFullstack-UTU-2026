@@ -2,45 +2,106 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Mis Ejercicios</title>
+    <title>Programación Fullstack - UTU 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
-        }
-        h1 {
-            margin-top: 40px;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li {
-            margin: 15px 0;
-        }
-        a {
-            text-decoration: none;
-            font-size: 18px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
             color: white;
-            background-color: #007BFF;
-            padding: 10px 20px;
-            border-radius: 5px;
+            text-align: center;
+            padding: 40px 20px;
         }
-        a:hover {
-            background-color: #0056b3;
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .contenedor {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .card h2 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 14px;
+            opacity: 0.8;
         }
     </style>
 </head>
+
 <body>
 
-    <h1>Menú de Ejercicios</h1>
+    <div class="contenedor">
+        <h1>💻 Programación Fullstack</h1>
+        <p>Repositorio de ejercicios - UTU 2026</p>
 
-    <ul>
-        <li><a href="ejercicio1/index.html">Ejercicio 1</a></li>
-        <li><a href="ejercicio2/index.html">Ejercicio 2</a></li>
-        <li><a href="ejercicio3/index.html">Ejercicio 3</a></li>
-    </ul>
+        <div class="grid">
+            <a class="card" href="ejercicio1/index.html">
+                <h2>Ejercicio 1</h2>
+                <p>Ver trabajo práctico</p>
+            </a>
+
+            <a class="card" href="ejercicio2/index.html">
+                <h2>Ejercicio 2</h2>
+                <p>Ver trabajo práctico</p>
+            </a>
+
+            <a class="card" href="ejercicio3/index.html">
+                <h2>Ejercicio 3</h2>
+                <p>Ver trabajo práctico</p>
+            </a>
+
+            <!-- Agregá más ejercicios acá -->
+            <!--
+            <a class="card" href="ejercicio4/index.html">
+                <h2>Ejercicio 4</h2>
+                <p>Ver trabajo práctico</p>
+            </a>
+            -->
+        </div>
+
+        <div class="footer">
+            <p>Hecho por Juan Robaina</p>
+        </div>
+    </div>
 
 </body>
 </html>
