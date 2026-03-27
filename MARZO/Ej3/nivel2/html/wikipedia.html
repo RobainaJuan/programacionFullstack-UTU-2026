@@ -7,53 +7,45 @@
 </head>
 <body>
 
-  <!-- HEADER: logo, buscador y herramientas de usuario -->
   <header>
-    <a href="#" aria-label="Portada de Wikipedia">
+    <a href="">
       <img src="logo-wikipedia.png" alt="Wikipedia" width="50" height="50" />
     </a>
 
-    <!-- Buscador -->
-    <form role="search" action="#" method="get">
+    <form role="search" action="" method="get">
       <label for="buscar">Buscar en Wikipedia</label>
       <input type="search" id="buscar" name="search" placeholder="Buscar en Wikipedia" />
       <button type="submit">Buscar</button>
     </form>
 
-    <!-- NAV: herramientas de cuenta -->
-    <nav aria-label="Herramientas de usuario">
+    <nav>
       <ul>
-        <li><a href="#">Crear cuenta</a></li>
-        <li><a href="#">Acceder</a></li>
+        <li><a href="">Crear cuenta</a></li>
+        <li><a href="">Acceder</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- NAV: pestañas del artículo (leer, editar, historial) -->
-  <nav aria-label="Acciones del artículo">
+  <nav>
     <ul>
-      <li><a href="#" aria-current="page">Leer</a></li>
-      <li><a href="#">Editar</a></li>
-      <li><a href="#">Ver historial</a></li>
+      <li><a href="" aria-current="page">Leer</a></li>
+      <li><a href="">Editar</a></li>
+      <li><a href="">Ver historial</a></li>
     </ul>
   </nav>
 
-  <!-- MAIN: contenido de la página -->
   <main>
 
-    <!-- ARTICLE: artículo enciclopédico principal -->
     <article>
       <h1>HTML</h1>
 
-      <!-- Introducción del artículo -->
       <p>
         <b>HTML</b> (<i>HyperText Markup Language</i>) es el lenguaje estándar de marcado para
         la creación de páginas web. Junto a CSS y JavaScript, HTML es una de las tres tecnologías
         fundamentales de la Web.
       </p>
 
-      <!-- Tabla informativa del artículo (ficha) -->
-      <aside aria-label="Ficha informativa de HTML">
+      <aside>
         <figure>
           <img src="html5-logo.png" alt="Logotipo de HTML5" width="120" height="120" />
           <figcaption>Logotipo oficial de HTML5</figcaption>
@@ -72,18 +64,16 @@
         </dl>
       </aside>
 
-      <!-- Índice del artículo -->
-      <nav aria-label="Tabla de contenidos">
+      <nav>
         <h2>Contenidos</h2>
         <ol>
-          <li><a href="#historia">Historia</a></li>
-          <li><a href="#marcado">Marcado</a></li>
-          <li><a href="#elementos">Elementos</a></li>
-          <li><a href="#referencias">Referencias</a></li>
+          <li><a href="historia">Historia</a></li>
+          <li><a href="marcado">Marcado</a></li>
+          <li><a href="elementos">Elementos</a></li>
+          <li><a href="referencias">Referencias</a></li>
         </ol>
       </nav>
 
-      <!-- SECTION: historia -->
       <section id="historia">
         <h2>Historia</h2>
         <p>
@@ -93,7 +83,6 @@
           evolucionó para soportar multimedia, formularios complejos y accesibilidad.
         </p>
 
-        <!-- Sub-sección -->
         <section id="html5">
           <h3>HTML5</h3>
           <p>
@@ -105,7 +94,6 @@
         </section>
       </section>
 
-      <!-- SECTION: marcado -->
       <section id="marcado">
         <h2>Marcado</h2>
         <p>
@@ -119,7 +107,6 @@
         </figure>
       </section>
 
-      <!-- SECTION: elementos principales -->
       <section id="elementos">
         <h2>Elementos principales</h2>
         <ul>
@@ -136,7 +123,6 @@
         </ul>
       </section>
 
-      <!-- SECTION: referencias -->
       <section id="referencias">
         <h2>Referencias</h2>
         <ol>
@@ -153,75 +139,68 @@
       </section>
 
     </article>
-    <!-- Fin del artículo principal -->
 
   </main>
 
-  <!-- ASIDE: barra lateral con herramientas del artículo y navegación temática -->
-  <aside aria-label="Barra lateral de Wikipedia">
+  <aside>
 
-    <!-- Búsqueda -->
-    <section aria-labelledby="sidebar-busqueda">
-      <h2 id="sidebar-busqueda">Buscar</h2>
-      <form role="search" action="#" method="get">
+    <section>
+      <h2>Buscar</h2>
+      <form role="search" action="" method="get">
         <label for="busqueda-lateral" class="visually-hidden">Buscar</label>
         <input type="search" id="busqueda-lateral" name="search" placeholder="Buscar en Wikipedia" />
         <button type="submit">Ir</button>
       </form>
     </section>
 
-    <!-- Navegación principal de Wikipedia -->
-    <nav aria-label="Navegación principal de Wikipedia">
+    <nav>
       <h2>Navegación</h2>
       <ul>
-        <li><a href="#">Portada</a></li>
-        <li><a href="#">Portal de la comunidad</a></li>
-        <li><a href="#">Cambios recientes</a></li>
-        <li><a href="#">Páginas nuevas</a></li>
-        <li><a href="#">Página aleatoria</a></li>
+        <li><a href="">Portada</a></li>
+        <li><a href="">Portal de la comunidad</a></li>
+        <li><a href="">Cambios recientes</a></li>
+        <li><a href="">Páginas nuevas</a></li>
+        <li><a href="">Página aleatoria</a></li>
       </ul>
     </nav>
 
-    <!-- Herramientas del artículo -->
-    <nav aria-label="Herramientas del artículo">
+    <nav>
       <h2>Herramientas</h2>
       <ul>
-        <li><a href="#">Lo que enlaza aquí</a></li>
-        <li><a href="#">Cambios relacionados</a></li>
-        <li><a href="#">Subir un archivo</a></li>
-        <li><a href="#">Páginas especiales</a></li>
-        <li><a href="#">Citar este artículo</a></li>
+        <li><a href="">Lo que enlaza aquí</a></li>
+        <li><a href="">Cambios relacionados</a></li>
+        <li><a href="">Subir un archivo</a></li>
+        <li><a href="">Páginas especiales</a></li>
+        <li><a href="">Citar este artículo</a></li>
       </ul>
     </nav>
 
-    <!-- Otros idiomas -->
-    <nav aria-label="Este artículo en otros idiomas">
+    <nav>
       <h2>Otros idiomas</h2>
       <ul>
-        <li><a href="#" hreflang="en">English</a></li>
-        <li><a href="#" hreflang="de">Deutsch</a></li>
-        <li><a href="#" hreflang="fr">Français</a></li>
-        <li><a href="#" hreflang="pt">Português</a></li>
-        <li><a href="#" hreflang="it">Italiano</a></li>
+        <li><a href="" hreflang="en">English</a></li>
+        <li><a href="" hreflang="de">Deutsch</a></li>
+        <li><a href="" hreflang="fr">Français</a></li>
+        <li><a href="" hreflang="pt">Português</a></li>
+        <li><a href="" hreflang="it">Italiano</a></li>
       </ul>
     </nav>
 
   </aside>
 
-  <!-- FOOTER: información de la fundación y legal -->
   <footer>
     <p>Este artículo fue modificado por última vez el 20 de marzo de 2025.</p>
     <p>
       El texto está disponible bajo la licencia
-      <a href="#" rel="license">Creative Commons Atribución-CompartirIgual 4.0</a>.
+      <a href="" rel="license">Creative Commons Atribución-CompartirIgual 4.0</a>.
     </p>
-    <nav aria-label="Pie de página Wikipedia">
+    <nav>
       <ul>
-        <li><a href="#">Política de privacidad</a></li>
-        <li><a href="#">Acerca de Wikipedia</a></li>
-        <li><a href="#">Limitación de responsabilidad</a></li>
-        <li><a href="#">Código de conducta</a></li>
-        <li><a href="#">Desarrolladores</a></li>
+        <li><a href="">Política de privacidad</a></li>
+        <li><a href="">Acerca de Wikipedia</a></li>
+        <li><a href="">Limitación de responsabilidad</a></li>
+        <li><a href="">Código de conducta</a></li>
+        <li><a href="">Desarrolladores</a></li>
       </ul>
     </nav>
     <p>&copy; 2025 Fundación Wikimedia</p>
