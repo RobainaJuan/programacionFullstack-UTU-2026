@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazon - Estructura Semántica Nivel 3</title>
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER: barra de navegación global
+       div.nav-bar-top agrupa los controles del header
+       Uso de div porque es un contenedor de diseño sin significado semántico propio
+  ============================================================ -->
+  <header>
+    <div class="nav-bar-top">
+
+      <!-- Logo -->
+      <div class="nav-logo">
+        <a href="#" aria-label="Inicio Amazon">
+          <img src="logo-amazon.png" alt="Amazon" width="126" height="38" />
+        </a>
+      </div>
+
+      <!-- Dirección de entrega -->
+      <div class="nav-location">
+        <span aria-hidden="true">📍</span>
+        <address>
+          <a href="#">Entregar en<br /><strong>Buenos Aires 1001</strong></a>
+        </address>
+      </div>
+
+      <!-- Buscador -->
+      <div class="nav-search">
+        <form role="search" action="#" method="get">
+          <label for="cat" class="visually-hidden">Categoría</label>
+          <select id="cat" name="node">
+            <option value="all">Todos</option>
+            <option value="electronics">Electrónica</option>
+            <option value="books">Libros</option>
+          </select>
+
+          <label for="busqueda" class="visually-hidden">Buscar</label>
+          <input
+            type="search"
+            id="busqueda"
+            name="field-keywords"
+            placeholder="Busca en Amazon"
+          />
+          <button type="submit" aria-label="Buscar">
+            <span aria-hidden="true">🔍</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Cuenta, idioma y carrito -->
+      <div class="nav-tools">
+        <a href="#" class="nav-link-language">
+          <img src="flag-es.png" alt="Idioma: Español" width="16" height="11" />
+          <span aria-hidden="true">▾</span>
+        </a>
+        <a href="#" class="nav-link-account">
+          Hola, <span class="nav-user-name">María</span><br />
+          <strong>Cuenta y listas</strong>
+        </a>
+        <a href="#" class="nav-link-returns">
+          Devoluciones<br /><strong>y pedidos</strong>
+        </a>
+        <a href="#" class="nav-link-cart" aria-label="Carrito con 3 artículos">
+          <img src="icono-carrito.png" alt="" aria-hidden="true" width="40" height="35" />
+          <span class="nav-cart-count">3</span>
+          <span>Carrito</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- NAV: barra secundaria de categorías -->
+  <nav aria-label="Navegación de categorías">
+    <div class="nav-bar-secondary">
+      <ul>
+        <li><a href="#"><span aria-hidden="true">☰</span> Menú</a></li>
+        <li><a href="#">Prime</a></li>
+        <li><a href="#">Hoy en Amazon</a></li>
+        <li><a href="#">Electrónica</a></li>
+        <li><a href="#">Moda</a></li>
+        <li><a href="#">Libros</a></li>
+        <li><a href="#">Juguetes</a></li>
+        <li><a href="#">Videojuegos</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       LAYOUT PRINCIPAL: div.page-layout agrupa aside + main
+       Se usa div porque es puramente estructural/visual
+  ============================================================ -->
+  <div class="page-layout">
+
+    <!-- ASIDE: filtros laterales (visible en páginas de búsqueda/categoría) -->
+    <aside aria-label="Filtros de búsqueda">
+      <div class="sidebar-inner">
+
+        <section aria-labelledby="filtro-dpto">
+          <h2 id="filtro-dpto">Departamento</h2>
+          <ul>
+            <li>
+              <a href="#">
+                <span class="filter-label">Todos los departamentos</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="filter-label">Electrónica</span>
+                <span class="filter-count">(4.532)</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="filter-label">Computadoras</span>
+                <span class="filter-count">(1.209)</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="filtro-marca">
+          <h2 id="filtro-marca">Marca</h2>
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" name="marca" value="samsung" />
+                <span>Samsung</span>
+                <span class="filter-count">(234)</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="marca" value="lg" />
+                <span>LG</span>
+                <span class="filter-count">(187)</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="marca" value="sony" />
+                <span>Sony</span>
+                <span class="filter-count">(155)</span>
+              </label>
+            </li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="filtro-precio">
+          <h2 id="filtro-precio">Precio</h2>
+          <form action="#" method="get">
+            <fieldset>
+              <legend class="visually-hidden">Rango de precio</legend>
+              <label for="precio-min">Desde $</label>
+              <input type="number" id="precio-min" name="low-price" min="0" />
+              <label for="precio-max">Hasta $</label>
+              <input type="number" id="precio-max" name="high-price" min="0" />
+              <button type="submit">Aplicar</button>
+            </fieldset>
+          </form>
+          <ul>
+            <li><a href="#">Menos de $10.000</a></li>
+            <li><a href="#">$10.000 – $50.000</a></li>
+            <li><a href="#">Más de $50.000</a></li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="filtro-rating">
+          <h2 id="filtro-rating">Valoración</h2>
+          <ul>
+            <li>
+              <a href="#" aria-label="4 estrellas y más">
+                <span aria-hidden="true">★★★★☆</span>
+                <span>y más</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="3 estrellas y más">
+                <span aria-hidden="true">★★★☆☆</span>
+                <span>y más</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+      </div>
+    </aside>
+
+    <!-- MAIN: contenido central de la página -->
+    <main>
+
+      <!-- SECTION: banner hero con imagen promocional -->
+      <section aria-label="Banner de ofertas">
+        <div class="hero-banner">
+          <img
+            src="banner-prime-day.jpg"
+            alt="Prime Day: grandes ofertas para miembros Prime — 2 días de descuentos increíbles"
+            width="1500"
+            height="600"
+          />
+        </div>
+      </section>
+
+      <!-- SECTION: accesos rápidos por categoría -->
+      <section aria-label="Categorías populares">
+        <div class="section-grid">
+          <h2>Compra por categoría</h2>
+
+          <div class="cards-row">
+
+            <article>
+              <div class="card-inner">
+                <h3>Electrónica</h3>
+                <ul>
+                  <li>
+                    <a href="#">
+                      <img src="cat-auriculares.jpg" alt="Auriculares inalámbricos" width="150" height="150" />
+                      Auriculares
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="cat-tablet.jpg" alt="Tablet con funda" width="150" height="150" />
+                      Tablets
+                    </a>
+                  </li>
+                </ul>
+                <a href="#">Ver todo en Electrónica</a>
+              </div>
+            </article>
+
+            <article>
+              <div class="card-inner">
+                <h3>Libros más vendidos</h3>
+                <ul>
+                  <li>
+                    <a href="#">
+                      <img src="libro-habitos.jpg" alt="Portada del libro Hábitos Atómicos" width="150" height="200" />
+                      Hábitos Atómicos
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="libro-sapiens.jpg" alt="Portada del libro Sapiens" width="150" height="200" />
+                      Sapiens
+                    </a>
+                  </li>
+                </ul>
+                <a href="#">Ver todo en Libros</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: productos recomendados -->
+      <section aria-label="Recomendaciones para ti">
+        <h2>Basado en tu historial de compras</h2>
+        <div class="products-carousel">
+
+          <article>
+            <div class="product-card">
+              <a href="#">
+                <img
+                  src="prod-monitor.jpg"
+                  alt="Monitor LG UltraWide 34 pulgadas curvo"
+                  width="300"
+                  height="300"
+                />
+              </a>
+              <div class="product-info">
+                <h3><a href="#">Monitor LG UltraWide 34"</a></h3>
+                <div class="product-rating">
+                  <span aria-label="4.7 de 5 estrellas">★★★★★</span>
+                  <span class="rating-count">(3.421)</span>
+                </div>
+                <div class="product-price">
+                  <span class="price-symbol">$</span>
+                  <span class="price-whole">89</span>
+                  <span class="price-decimal">.999</span>
+                </div>
+                <span class="prime-badge">
+                  <img src="badge-prime.png" alt="Entrega Prime" width="47" height="15" />
+                </span>
+                <a href="#" class="btn-add-cart">Agregar al carrito</a>
+              </div>
+            </div>
+          </article>
+
+          <article>
+            <div class="product-card">
+              <a href="#">
+                <img
+                  src="prod-mouse.jpg"
+                  alt="Mouse inalámbrico Logitech MX Master 3"
+                  width="300"
+                  height="300"
+                />
+              </a>
+              <div class="product-info">
+                <h3><a href="#">Mouse Logitech MX Master 3</a></h3>
+                <div class="product-rating">
+                  <span aria-label="4.9 de 5 estrellas">★★★★★</span>
+                  <span class="rating-count">(9.872)</span>
+                </div>
+                <div class="product-price">
+                  <span class="price-symbol">$</span>
+                  <span class="price-whole">32</span>
+                  <span class="price-decimal">.500</span>
+                </div>
+                <span class="prime-badge">
+                  <img src="badge-prime.png" alt="Entrega Prime" width="47" height="15" />
+                </span>
+                <a href="#" class="btn-add-cart">Agregar al carrito</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+  <!-- Fin del layout principal -->
+
+  <!-- FOOTER: navegación global inferior -->
+  <footer>
+    <div class="footer-inner">
+
+      <nav aria-label="Conócenos">
+        <h2>Conócenos</h2>
+        <ul>
+          <li><a href="#">Carreras</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Acerca de Amazon</a></li>
+          <li><a href="#">Inversores</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Gana dinero con Amazon">
+        <h2>Gana dinero con Amazon</h2>
+        <ul>
+          <li><a href="#">Vende en Amazon</a></li>
+          <li><a href="#">Afiliados</a></li>
+          <li><a href="#">Publicidad</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Ayuda">
+        <h2>Podemos ayudarte</h2>
+        <ul>
+          <li><a href="#">Seguir pedido</a></li>
+          <li><a href="#">Devoluciones</a></li>
+          <li><a href="#">Atención al cliente</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <div class="footer-bottom">
+      <a href="#" aria-label="Inicio de Amazon">
+        <img src="logo-amazon-white.png" alt="Amazon" width="100" height="30" />
+      </a>
+      <nav aria-label="Legal">
+        <ul>
+          <li><a href="#">Condiciones de uso</a></li>
+          <li><a href="#">Aviso de privacidad</a></li>
+          <li><a href="#">Ayuda</a></li>
+        </ul>
+      </nav>
+      <p>
+        <span>&copy; 1996–2025</span>
+        <span>Amazon.com, Inc. o sus afiliados</span>
+      </p>
+    </div>
+
+  </footer>
+
+</body>
+</html>

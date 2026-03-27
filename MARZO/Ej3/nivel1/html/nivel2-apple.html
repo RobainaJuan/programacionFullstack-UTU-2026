@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apple - Estructura Semántica Nivel 2</title>
+</head>
+<body>
+
+  <!-- HEADER: navegación global de Apple -->
+  <header>
+    <nav aria-label="Navegación global de Apple">
+      <a href="#" aria-label="Inicio de Apple">
+        <img src="logo-apple.png" alt="Apple" width="20" height="24" />
+      </a>
+      <ul>
+        <li><a href="#">Store</a></li>
+        <li><a href="#">Mac</a></li>
+        <li><a href="#">iPad</a></li>
+        <li><a href="#">iPhone</a></li>
+        <li><a href="#">Watch</a></li>
+        <li><a href="#">Vision</a></li>
+        <li><a href="#">AirPods</a></li>
+        <li><a href="#">TV y Casa</a></li>
+        <li><a href="#">Entretenimiento</a></li>
+        <li><a href="#">Accesorios</a></li>
+        <li><a href="#">Soporte</a></li>
+        <li>
+          <form role="search" action="#" method="get">
+            <label for="busqueda" class="visually-hidden">Buscar en Apple.com</label>
+            <input type="search" id="busqueda" name="q" placeholder="Buscar en Apple.com" />
+            <button type="submit" aria-label="Buscar">🔍</button>
+          </form>
+        </li>
+        <li>
+          <a href="#" aria-label="Ver bolsa de compras">
+            🛍
+            <span aria-label="0 artículos">0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN: página de inicio con productos destacados -->
+  <main>
+
+    <!-- SECTION: hero principal - iPhone 16 Pro -->
+    <section aria-label="Producto principal - iPhone 16 Pro">
+      <h1>iPhone 16 Pro</h1>
+      <p>El chip más veloz. La cámara más avanzada. El iPhone más Pro.</p>
+      <nav aria-label="Acciones del iPhone 16 Pro">
+        <ul>
+          <li><a href="#">Conoce más</a></li>
+          <li><a href="#">Comprar</a></li>
+        </ul>
+      </nav>
+      <figure>
+        <img
+          src="iphone16pro-hero.jpg"
+          alt="iPhone 16 Pro en titanio negro, vistas frontal y trasera"
+          width="1200"
+          height="700"
+        />
+      </figure>
+    </section>
+
+    <!-- SECTION: iPadAir -->
+    <section aria-label="Producto destacado - iPad Air">
+      <h2>iPad Air</h2>
+      <p>Potencia de M2. En cualquier tamaño.</p>
+      <nav aria-label="Acciones del iPad Air">
+        <ul>
+          <li><a href="#">Conoce más</a></li>
+          <li><a href="#">Comprar</a></li>
+        </ul>
+      </nav>
+      <figure>
+        <img
+          src="ipad-air-m2.jpg"
+          alt="iPad Air con chip M2 en colores azul cielo, lila, verde y gris espacial"
+          width="1200"
+          height="600"
+        />
+      </figure>
+    </section>
+
+    <!-- SECTION: MacBook Pro -->
+    <section aria-label="Producto destacado - MacBook Pro">
+      <h2>MacBook Pro</h2>
+      <p>Increíblemente capaz. Sorprendentemente compacto.</p>
+      <nav aria-label="Acciones del MacBook Pro">
+        <ul>
+          <li><a href="#">Conoce más</a></li>
+          <li><a href="#">Comprar</a></li>
+        </ul>
+      </nav>
+      <figure>
+        <img
+          src="macbook-pro-m3.jpg"
+          alt="MacBook Pro con pantalla Liquid Retina XDR sobre un escritorio"
+          width="1200"
+          height="600"
+        />
+      </figure>
+    </section>
+
+    <!-- SECTION: Apple Watch con video promocional -->
+    <section aria-label="Producto destacado - Apple Watch Series 10">
+      <h2>Apple Watch Series 10</h2>
+      <p>Más delgado. Más inteligente. Más Watch que nunca.</p>
+      <nav aria-label="Acciones del Apple Watch">
+        <ul>
+          <li><a href="#">Conoce más</a></li>
+          <li><a href="#">Comprar</a></li>
+        </ul>
+      </nav>
+      <figure>
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          width="1200"
+          height="600"
+          poster="apple-watch-poster.jpg"
+        >
+          <source src="apple-watch-promo.mp4" type="video/mp4" />
+          <img
+            src="apple-watch-poster.jpg"
+            alt="Apple Watch Series 10 en varios colores y materiales"
+            width="1200"
+            height="600"
+          />
+        </video>
+        <figcaption>Apple Watch Series 10 — disponible en aluminio y titanio.</figcaption>
+      </figure>
+    </section>
+
+    <!-- SECTION: servicios (artículos individuales por servicio) -->
+    <section aria-label="Servicios de Apple">
+      <h2>Servicios</h2>
+
+      <article>
+        <img src="apple-tv-plus.jpg" alt="Logo de Apple TV+" width="400" height="300" />
+        <h3>Apple TV+</h3>
+        <p>Series y películas originales premiadas. Sin anuncios.</p>
+        <a href="#">Ver ahora</a>
+      </article>
+
+      <article>
+        <img src="apple-music.jpg" alt="Logo de Apple Music con notas musicales" width="400" height="300" />
+        <h3>Apple Music</h3>
+        <p>100 millones de canciones, sin anuncios y en alta fidelidad.</p>
+        <a href="#">Escuchar ahora</a>
+      </article>
+
+      <article>
+        <img src="apple-arcade.jpg" alt="Pantallas con juegos de Apple Arcade" width="400" height="300" />
+        <h3>Apple Arcade</h3>
+        <p>Más de 200 juegos sin compras dentro de la app.</p>
+        <a href="#">Jugar ahora</a>
+      </article>
+
+    </section>
+
+    <!-- SECTION: Apple Trade In (formulario) -->
+    <section aria-label="Programa de canje Apple Trade In">
+      <h2>Apple Trade In</h2>
+      <p>Entrega tu dispositivo anterior y obtén crédito para uno nuevo.</p>
+
+      <form action="#" method="get">
+        <fieldset>
+          <legend>¿Qué dispositivo tienes?</legend>
+          <label for="dispositivo">Tipo de dispositivo</label>
+          <select id="dispositivo" name="dispositivo">
+            <option value="">Selecciona un dispositivo</option>
+            <option value="iphone">iPhone</option>
+            <option value="ipad">iPad</option>
+            <option value="mac">Mac</option>
+            <option value="apple-watch">Apple Watch</option>
+          </select>
+          <label for="modelo">Modelo</label>
+          <input type="text" id="modelo" name="modelo" placeholder="Ej: iPhone 13 Pro" />
+          <button type="submit">Ver mi estimado</button>
+        </fieldset>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ASIDE: banner contextual de Apple Store (aparece en sección Store) -->
+  <aside aria-label="Información adicional de Apple Store">
+    <h2>Apple Store</h2>
+    <p>Compra con la ayuda de un Specialist en línea o en tienda.</p>
+    <ul>
+      <li><a href="#">Reservar una cita</a></li>
+      <li><a href="#">Financiamiento disponible</a></li>
+      <li><a href="#">Envío gratis en pedidos +$999</a></li>
+    </ul>
+  </aside>
+
+  <!-- FOOTER: navegación completa por producto y legal -->
+  <footer>
+    <nav aria-label="Productos Apple">
+      <h2>Comprar y explorar</h2>
+      <ul>
+        <li><a href="#">Mac</a></li>
+        <li><a href="#">iPad</a></li>
+        <li><a href="#">iPhone</a></li>
+        <li><a href="#">Apple Watch</a></li>
+        <li><a href="#">Apple Vision Pro</a></li>
+        <li><a href="#">AirPods</a></li>
+        <li><a href="#">AirTag</a></li>
+        <li><a href="#">Apple TV 4K</a></li>
+        <li><a href="#">HomePod</a></li>
+        <li><a href="#">Accesorios</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Servicios Apple">
+      <h2>Servicios</h2>
+      <ul>
+        <li><a href="#">Apple Music</a></li>
+        <li><a href="#">Apple TV+</a></li>
+        <li><a href="#">Apple Arcade</a></li>
+        <li><a href="#">iCloud+</a></li>
+        <li><a href="#">Apple One</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Acerca de Apple">
+      <h2>Apple</h2>
+      <ul>
+        <li><a href="#">Sala de prensa</a></li>
+        <li><a href="#">Empleo</a></li>
+        <li><a href="#">Inversores</a></li>
+        <li><a href="#">Ética y cumplimiento</a></li>
+      </ul>
+    </nav>
+    <p>Copyright &copy; 2025 Apple Inc. Todos los derechos reservados.</p>
+    <nav aria-label="Legal">
+      <ul>
+        <li><a href="#">Privacidad</a></li>
+        <li><a href="#">Condiciones de uso</a></li>
+        <li><a href="#">Mapa del sitio</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+</body>
+</html>
