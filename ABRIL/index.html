@@ -34,6 +34,23 @@
             margin: auto;
         }
 
+        /* BOTÓN VOLVER */
+        .btn-volver {
+            display: inline-block;
+            margin-bottom: 25px;
+            padding: 10px 18px;
+            background: white;
+            color: #333;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        .btn-volver:hover {
+            background: #ddd;
+        }
+
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -72,6 +89,7 @@
     <div class="contenedor">
         <h1>💻 Programación Fullstack</h1>
         <p>Repositorio de ejercicios - UTU 2026</p>
+        <a href="../index.html" class="btn-volver">⬅ Volver a Abril</a>
 
         <div class="grid">
             <a class="card" href="Ej4/index.html">

@@ -22,6 +22,7 @@
 
         h1 {
             margin-bottom: 10px;
+            font-size: 32px;
         }
 
         p {
@@ -30,39 +31,47 @@
         }
 
         .contenedor {
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
         }
 
         .card {
             background: white;
             color: #333;
-            padding: 20px;
-            border-radius: 10px;
+            padding: 25px;
+            border-radius: 12px;
             text-decoration: none;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: block;
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.25);
         }
 
         .card h2 {
             margin-bottom: 10px;
-            font-size: 20px;
+            font-size: 22px;
         }
 
         .footer {
-            margin-top: 40px;
+            margin-top: 50px;
             font-size: 14px;
             opacity: 0.8;
+        }
+
+        /* Responsive extra */
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 26px;
+            }
         }
     </style>
 </head>
@@ -74,17 +83,14 @@
         <p>Repositorio de ejercicios - UTU 2026</p>
 
         <div class="grid">
-            <a class="card" href="MARZO/index.html">
-                <h2>MARZO</h2>
+            <a class="card" href="MARZO/index.html" target="_blank">
+                <h2>📅 Marzo</h2>
                 <p>Ver trabajos prácticos</p>
-                <p>-------de marzo-------</p>
             </a>
-        </div>
-        <div class="grid">
-            <a class="card" href="ABRIL/index.html">
-                <h2>ABRIL</h2>
+
+            <a class="card" href="ABRIL/index.html" target="_blank">
+                <h2>📅 Abril</h2>
                 <p>Ver trabajos prácticos</p>
-                <p>-------de abril-------</p>
             </a>
         </div>
 
