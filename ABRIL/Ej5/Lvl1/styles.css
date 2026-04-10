@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #eee;
+  padding: 20px;
+}
+
+.verde { background: #2ecc71; }
+.rojo { background: #e74c3c; color: #fff; }
+.azul { background: #3498db; color: #fff; }
+
+.ordencajas {
+  display: flex;
+  gap: 22.5px;
+  margin-top: 10px;
+}
+
+.caja {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  padding: 10px;
+  color: #fff;
+  border: 5px solid #000;
+}
