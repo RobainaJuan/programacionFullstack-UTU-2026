@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 98%;
+    background: #2f3437;
+    color: white;
+    padding: 15px;
+    z-index: 1000;
+}
+
+.icono {
+    float: right;
+}
+
+.contenedor {
+    margin-top: 50px;
+    width: 100%px;
+    border-left: 2px solid black;
+}
+
+.zona-categorias {
+    height: 250px;
+    position: relative;
+}
+
+.categorias {
+    position: sticky;
+    top: 50px;
+    background: #6fa0d6;
+    padding: 10px;
+}
+
+.linea {
+    border-top: 3px dashed red;
+}
+
+.contenido {
+    height: 1000px;
+    background: #ddd;
+    padding: 20px;
+}

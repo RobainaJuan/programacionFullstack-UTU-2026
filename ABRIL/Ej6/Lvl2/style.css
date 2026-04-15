@@ -1,0 +1,56 @@
+body {
+            background-color: #F5F6FA;
+            font-family: Arial;
+            padding: 50px;
+        }
+
+        .contenedor {
+            display: flex;
+            gap: 30px;
+        }
+
+        .tarjeta {
+            width: 130px;
+            height: 110px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            position: relative;
+        }
+
+        .celeste {
+            background-color: #74B9FF;
+            transition: 0.3s;
+        }
+
+        .rojo {
+            background-color: #FF7675;
+            width: 200px;
+            margin-top: 30px;
+            transition: 0.3s;
+        }
+
+        .celeste:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+
+        .rojo:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+
+        .sale {
+            position: absolute;
+            left: 10px;
+            bottom: 7px;
+            height: 70px;
+            background-color: #FF0000;
+            color: white;
+            padding: 20px 5px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
