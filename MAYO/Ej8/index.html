@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUCA'S RUN — Instituto Tecnológico Industrial</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ======================== PANTALLA DE INICIO ======================== -->
+  <div id="startScreen" class="overlay active">
+    <div class="title-block">
+      <div class="scanline-overlay"></div>
+      <p class="subtitle">INSTITUTO TECNOLÓGICO INDUSTRIAL</p>
+      <h1 class="game-title">LUCA'S<br><span>RUN</span></h1>
+      <p class="tagline">¡Diego te persigue! ¡No te detengas!</p>
+    </div>
+    <div class="char-preview">
+      <canvas id="previewCanvas" width="320" height="180"></canvas>
+    </div>
+    <div class="controls-hint">
+      <span class="key">↑ / W / SPACE</span> Saltar &nbsp;|&nbsp;
+      <span class="key">↑↑</span> Doble Salto &nbsp;|&nbsp;
+      <span class="key">↓ / S</span> Deslizar
+    </div>
+    <button id="startBtn" class="btn-primary">▶ COMENZAR</button>
+    <div class="version-tag">v1.0 — MODO INFINITO</div>
+  </div>
+
+  <!-- ======================== PANTALLA DE GAME OVER ======================== -->
+  <div id="gameOverScreen" class="overlay">
+    <div class="go-content">
+      <p class="go-sub">DIEGO TE ALCANZÓ</p>
+      <h2 class="go-title">GAME OVER</h2>
+      <div class="go-stats">
+        <div class="stat-row"><span>DISTANCIA</span><span id="goDistance">0 m</span></div>
+        <div class="stat-row"><span>PUNTUACIÓN</span><span id="goScore">0</span></div>
+        <div class="stat-row"><span>VELOCIDAD MÁX.</span><span id="goSpeed">0 km/h</span></div>
+      </div>
+      <button id="restartBtn" class="btn-primary">↺ REINTENTAR</button>
+      <button id="menuBtn" class="btn-secondary">⌂ MENÚ</button>
+    </div>
+  </div>
+
+  <!-- ======================== HUD ======================== -->
+  <div id="hud">
+    <div class="hud-left">
+      <div class="hud-item">
+        <span class="hud-label">PUNTOS</span>
+        <span class="hud-value" id="scoreDisplay">0</span>
+      </div>
+      <div class="hud-item">
+        <span class="hud-label">DISTANCIA</span>
+        <span class="hud-value" id="distanceDisplay">0 m</span>
+      </div>
+    </div>
+    <div class="hud-center">
+      <div class="danger-bar-wrap">
+        <span class="hud-label">PELIGRO</span>
+        <div class="danger-bar-bg">
+          <div class="danger-bar-fill" id="dangerBar"></div>
+        </div>
+      </div>
+    </div>
+    <div class="hud-right">
+      <div class="hud-item">
+        <span class="hud-label">VELOCIDAD</span>
+        <span class="hud-value" id="speedDisplay">0 km/h</span>
+      </div>
+      <div class="hud-item">
+        <span class="hud-label">NIVEL</span>
+        <span class="hud-value" id="levelDisplay">1</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================== CANVAS PRINCIPAL ======================== -->
+  <canvas id="gameCanvas"></canvas>
+
+  <!-- ======================== MENSAJE DE POWER-UP ======================== -->
+  <div id="powerupMsg" class="powerup-msg"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
