@@ -1,0 +1,31 @@
+body{
+    font-family:Arial;
+    min-height:100vh;
+}
+
+.tarjeta{
+    border:1px solid black;
+    padding:10px;
+    margin-top:10px;
+}
+
+.oscuro{
+    background-color:black;
+    color:white;
+}
+
+
+
+.oscuro input{
+    background-color:#222;
+    color:white;
+}
+
+.oscuro textarea{
+    background-color:#222;
+    color:white;
+}
+
+.oscuro .tarjeta{
+    border:1px solid white;
+}
