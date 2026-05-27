@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Galeria</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>
+        Galeria de imagenes
+    </h1>
+
+    <form id="formulario">
+
+        <input
+        type="text"
+        id="titulo"
+        placeholder="Titulo de la imagen">
+
+        <br><br>
+
+        <input
+        type="text"
+        id="url"
+        placeholder="URL de la imagen">
+
+        <br><br>
+
+        <button type="submit">
+            Agregar
+        </button>
+
+    </form>
+
+    <p id="error"></p>
+
+    <br>
+
+    <button id="mostrarTodas">
+        Mostrar todas
+    </button>
+
+    <button id="mostrarFavoritas">
+        Mostrar favoritas
+    </button>
+
+    <button id="mostrarNoFavoritas">
+        Mostrar no favoritas
+    </button>
+
+    <button id="borrarGaleria">
+        Borrar galeria
+    </button>
+
+    <br><br>
+
+    <p id="contadorTotal">
+        Total: 0
+    </p>
+
+    <p id="contadorFavoritas">
+        Favoritas: 0
+    </p>
+
+    <p id="contadorNoFavoritas">
+        No favoritas: 0
+    </p>
+
+    <div id="galeria">
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

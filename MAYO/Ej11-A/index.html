@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de tareas</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>
+        Lista de tareas
+    </h1>
+
+    <form id="formulario">
+
+        <input
+        type="text"
+        id="tarea"
+        placeholder="Escribe una tarea">
+
+        <button type="submit">
+            Agregar
+        </button>
+
+    </form>
+
+    <p id="error"></p>
+
+    <br>
+
+    <button id="todas">
+        Todas
+    </button>
+
+    <button id="completadas">
+        Completadas
+    </button>
+
+    <button id="pendientes">
+        Pendientes
+    </button>
+
+    <button id="borrarTodo">
+        Borrar todo
+    </button>
+
+    <br><br>
+
+    <p id="contadorTotal">
+        Total: 0
+    </p>
+
+    <p id="contadorCompletadas">
+        Completadas: 0
+    </p>
+
+    <p id="contadorPendientes">
+        Pendientes: 0
+    </p>
+
+    <ul id="lista">
+
+    </ul>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
