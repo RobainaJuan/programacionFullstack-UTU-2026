@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi colección favorita</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Mi colección favorita</h1>
+
+    <p>
+        Guarda videojuegos, películas y series para organizar tu colección.
+    </p>
+
+    <button id="modoBtn">Cambiar modo</button>
+
+    <h3>Agregar elemento</h3>
+
+    <form id="formulario">
+
+        <input type="text" id="nombre" placeholder="Nombre">
+
+        <input type="text" id="descripcion" placeholder="Descripción">
+
+        <select id="tipo">
+            <option value="Videojuego">Videojuego</option>
+            <option value="Película">Película</option>
+            <option value="Serie">Serie</option>
+            <option value="Otro">Otro</option>
+        </select>
+
+        <select id="estado">
+            <option value="Pendiente">Pendiente</option>
+            <option value="En progreso">En progreso</option>
+            <option value="Terminado">Terminado</option>
+        </select>
+
+        <input type="number" id="calificacion" min="1" max="5" placeholder="Calificación">
+
+        <input type="text" id="imagen" placeholder="URL de imagen">
+
+        <button type="submit">Agregar</button>
+
+    </form>
+
+    <p id="error"></p>
+
+    <h3 id="contador">Elementos agregados: 0</h3>
+
+    <h3>Filtros</h3>
+
+    <select id="filtro">
+        <option value="Todos">Todos</option>
+        <option value="Videojuego">Videojuegos</option>
+        <option value="Película">Películas</option>
+        <option value="Serie">Series</option>
+        <option value="Favoritos">Favoritos</option>
+        <option value="Pendiente">Pendientes</option>
+        <option value="En progreso">En progreso</option>
+        <option value="Terminado">Terminados</option>
+    </select>
+
+    <section id="contenedor"></section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

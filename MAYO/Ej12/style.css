@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.oscuro {
+    background-color: #222;
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+}
+
+#contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.tarjeta {
+    border: 1px solid black;
+    padding: 10px;
+    width: 250px;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.favorito {
+    border: 3px solid gold;
+}
+
+.titulo-activo {
+    color: red;
+    font-size: 24px;
+    text-decoration: underline;
+}
+
+#error {
+    color: red;
+}
